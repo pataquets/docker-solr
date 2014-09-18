@@ -1,8 +1,7 @@
-FROM pataquets/ubuntu:trusty
+FROM pataquets/default-jre-headless
 
 RUN DEBIAN_FRONTEND=noninteractive \
         apt-get -y install \
-                default-jre-headless \
                 wget \
         && \
         apt-get clean
