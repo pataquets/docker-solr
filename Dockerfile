@@ -1,10 +1,10 @@
 FROM pataquets/default-jre-headless
 
 RUN DEBIAN_FRONTEND=noninteractive \
-        apt-get -y install \
-                wget \
-        && \
-        apt-get clean
+	apt-get -y install \
+		wget \
+	&& \
+	apt-get clean
 
 ENV SOLR_VERSION 4.10.0
 ENV SOLR solr-$SOLR_VERSION
