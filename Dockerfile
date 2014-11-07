@@ -4,7 +4,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
 	apt-get -y install \
 		wget \
 	&& \
-	apt-get clean
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/*
 
 ENV SOLR_VERSION 4.10.1
 ENV SOLR solr-$SOLR_VERSION
@@ -15,3 +16,5 @@ RUN \
  tar xvf $SOLR.tgz && \
  rm -v $SOLR.tgz && \
  mv $SOLR /opt/solr
+
+WORKDIR /opt/solr
