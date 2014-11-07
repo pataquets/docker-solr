@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
-ENV SOLR_VERSION 4.10.1
+ENV SOLR_VERSION 4.10.2
 ENV SOLR solr-$SOLR_VERSION
 
 #TODO: symlink instead of 'mv' as on makuk66/docker-solr
