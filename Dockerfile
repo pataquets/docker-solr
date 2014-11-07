@@ -17,4 +17,6 @@ RUN \
  rm -v $SOLR.tgz && \
  mv $SOLR /opt/solr
 
-WORKDIR /opt/solr
+WORKDIR /opt/solr/example
+
+ENTRYPOINT [ "java", "-jar", "start.jar" ]
