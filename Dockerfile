@@ -1,8 +1,9 @@
 FROM pataquets/default-jre-headless
 
-RUN DEBIAN_FRONTEND=noninteractive \
-	apt-get -y install \
-		wget \
+RUN \
+	apt-get update && \
+	DEBIAN_FRONTEND=noninteractive \
+		apt-get -y install wget \
 	&& \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
