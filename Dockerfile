@@ -29,7 +29,7 @@ RUN \
   mkdir -vp /opt/tika && \
   wget ${TIKA_DOWNLOAD_URL} -O /opt/tika/${TIKA_JAR_NAME} && \
   chmod -v a+x /opt/tika/${TIKA_JAR_NAME} && \
-  ln -vs /opt/tika/${TIKA_JAR_NAME} /usr/local/bin/tika.jar \
+  ln -vs /opt/tika/${TIKA_JAR_NAME} /opt/tika/tika.jar
 ##############################################################################
 
 WORKDIR /opt/solr/example
