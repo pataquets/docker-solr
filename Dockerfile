@@ -8,7 +8,7 @@ RUN \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
-ENV SOLR_VERSION 4.10.3
+ENV SOLR_VERSION 4.10.4
 ENV SOLR solr-$SOLR_VERSION
 
 #TODO: symlink instead of 'mv' as on makuk66/docker-solr
