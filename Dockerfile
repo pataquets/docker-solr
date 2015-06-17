@@ -1,12 +1,12 @@
 FROM pataquets/default-jre-headless
 
 RUN \
-	apt-get update && \
-	DEBIAN_FRONTEND=noninteractive \
-		apt-get -y install wget \
-	&& \
-	apt-get clean && \
-	rm -rf /var/lib/apt/lists/*
+  apt-get update && \
+  DEBIAN_FRONTEND=noninteractive \
+    apt-get -y install wget \
+  && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
 
 ENV SOLR_VERSION 4.10.2
 ENV SOLR solr-$SOLR_VERSION
