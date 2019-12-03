@@ -1,4 +1,4 @@
-FROM pataquets/default-jre-headless
+FROM pataquets/default-jre-headless:xenial
 
 RUN \
   apt-get update && \
@@ -14,7 +14,8 @@ ENV SOLR solr-${SOLR_VERSION}
 #TODO: symlink instead of 'mv' as on makuk66/docker-solr
 RUN \
   curl --fail --location --silent --show-error --output ${SOLR}.tgz \
-    https://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/${SOLR}.tgz && \
+    https://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/${SOLR}.tgz \
+  && \
   tar xvf ${SOLR}.tgz && \
   rm -v ${SOLR}.tgz && \
   mv ${SOLR} /opt/solr
